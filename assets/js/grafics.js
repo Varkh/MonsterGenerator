@@ -34,7 +34,7 @@
 	//$('.selectpicker').selectpicker();
 
       reptUpperLeg.onload = function() {
-	drawMonster();
+	drawText();
       };
 	
 //----- add event listener to element 
@@ -69,7 +69,17 @@
 			break;
 			case 'hum': $(".hum").show();
 		}
+		drawText();
 	});
+
+	function drawText() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		ctx.save();
+		ctx.font = "30px Georgia";
+		ctx.fillStyle = '#777';
+		ctx.fillText("Примените фильтр", 100, 200);
+		ctx.fillText("что бы увидеть рисунок.", 70, 230);	
+	}
 
 //----- add
 	function drawReptile(legsN, eyesN) {

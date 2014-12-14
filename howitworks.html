@@ -25,6 +25,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<style>
+	.button-wrapper select {
+		width: 500px;	
+	}
+</style>
 </head> 
 
 <body data-spy="scroll">
@@ -75,8 +80,8 @@
    <div class="row generator">
     <div class="col-md-10">
     <h2>Фильтр</h2>
-        <div class="line"></div>
-	<div class="row" style="margin: 10px">
+        <div class="line" style="margin:16px auto 39px"></div>
+	<div class="row" style="margin-bottom: 40px">
 	<div class="btn-group center-block" role="group" id="monsterType" style="width:300px; margin: 10px auto;">
 	  <button type="button" class="btn btn-default changeMonster" style="width:100px;" value="rept">Рептилия</button>
 	  <button type="button" class="btn btn-default changeMonster" style="width:100px;" value="cock">Жук</button>
@@ -87,24 +92,24 @@
    <div class="col-md-7">
 	<canvas id="myCanvas" width="500" height="500" class="gen-result"></canvas>
   </div>
-  <div class="col-md-5">
+  <div class="col-md-5 button-wrapper">
       <!-- Single button -->
-<div class="row">
-   <label class="reptile">Хищник:<!--TODO-->
+<!--<div class="row">
+   <label class="reptile">Хищник:
       <select id="rept-hunter" class="form-control">
 	<option value="0">Нет</option>
 	<option value="1">Да</option>
       </select></br>
     </label>
 </div>
-<div class="row"><!--TODO-->
+<div class="row">
          <label class="reptile">Время активности:
 	<select id="rept-day" class="form-control">
 		<option value="day">День</option>
 		<option value="night">Ночь</option>
 	</select></br>
     </label>
-</div>
+</div>-->
 <div class="row">
    <label class="reptile">Количество лап:
 	<select id="rept-legs" class="form-control">
