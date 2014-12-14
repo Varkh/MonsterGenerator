@@ -2,6 +2,9 @@
 
       var canvas = document.getElementById('myCanvas');
       var ctx = canvas.getContext('2d');
+	var selectedMonster = 'rept';
+	$(".cock").hide();
+	$(".hum").hide();
 	
       //images
 	var imageReptileBody = new Image();
@@ -37,27 +40,35 @@
 //----- add event listener to element 
 	$('#generateMonster').click(drawMonster);
 	function drawMonster() {
-		switch(getMonsterType()) {
+		switch(selectedMonster) {
     			case 'rept': drawReptile(getSelectValue('rept-legs'), getSelectValue('rept-eyes'));
         		break;
-			case 'cock': drawCock(0,1,2,1);
+			case 'cock': 
+				drawCock(
+					getSelectValue('cock-body'),
+					getSelectValue('cock-legs'),
+					getSelectValue('cock-tail'),
+					getSelectValue('cock-throat'));
 			break;
-			case 'hum': drawHumanoid(1,1,1,1);
+			case 'hum': drawHumanoid(
+					getSelectValue('hum-head'),
+					getSelectValue('hum-striks'),
+					getSelectValue('hum-fingers'),
+					getSelectValue('hum-tail'));
 		}
 	}
-	$('#monsterType').change(function() {
+	$('.changeMonster').click(function() {
 		$(".reptile").hide();
-
-		switch(getMonsterType()) {
+		$(".cock").hide();
+		$(".hum").hide();
+		selectedMonster = $(this).val();
+		switch(selectedMonster) {
     			case 'rept': $(".reptile").show();
         		break;
-			case 'cock': 
+			case 'cock': $(".cock").show();
 			break;
-			case 'hum': 
+			case 'hum': $(".hum").show();
 		}
-		//hunter
-		//day/night
-		//$("#legs").append(new Option("t","1"));
 	});
 
 //----- add
@@ -105,12 +116,12 @@
 		}
 		var scale_add = body ? 0 : 15;
 		switch(tale) {
-			case 2: ctx.drawImage(cockTale2, 305+scale_add, 120);
-			case 1: ctx.drawImage(cockTale, 323+scale_add, 165);
+			case '2': ctx.drawImage(cockTale2, 305+scale_add, 120);
+			case '1': ctx.drawImage(cockTale, 323+scale_add, 165);
 			break;		
 		} 
 		if(throat == 1) {
-			ctx.drawImage(cockThroat, 105, 270);//TODO background
+			ctx.drawImage(cockThroat, 105, 270);
 		}
 	}
 

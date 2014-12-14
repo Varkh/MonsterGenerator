@@ -73,91 +73,49 @@
     
     
    <div class="row generator">
-    <div class="col-md-9">
+    <div class="col-md-10">
     <h2>Фильтр</h2>
         <div class="line"></div>
-	<canvas id="myCanvas" width="500" height="500" class="gen-result"></canvas>
-      <!-- Single button -->
-      <span class="name-cat">Среда обитания</span>
-      <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-          Скелет <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">Скелет 1</a></li>
-          <li><a href="#">Скелет</a></li>
-          <li><a href="#">Скелет3</a></li>
-        </ul>
-      </div>
-      <span class="name-cat">Хвост</span>
-      <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-          2 <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-        </ul>
-      </div>
-      <span class="name-cat">Кушает</span>
-      <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-          Охотник <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">Кушает1</a></li>
-          <li><a href="#">Кушает</a></li>
-          <li><a href="#">Кушает</a></li>
-        </ul>
-      </div>
-      <span class="name-cat">Модификация</span>
-      <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-          Робот<span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">Мод 1</a></li>
-          <li><a href="#">Мод</a></li>
-          <li><a href="#">Мод</a></li>
-        </ul>
-      </div>
-      <button type="button" class="btn btn-default apply">Применить</button>
-    </div>
-
-
-
+	<div class="row" style="margin: 10px">
+	<div class="btn-group center-block" role="group" id="monsterType" style="width:300px; margin: 10px auto;">
+	  <button type="button" class="btn btn-default changeMonster" style="width:100px;" value="rept">Рептилия</button>
+	  <button type="button" class="btn btn-default changeMonster" style="width:100px;" value="cock">Жук</button>
+	  <button type="button" class="btn btn-default changeMonster" style="width:100px;" value="hum">Гуманоид</button>
+	</div>
+	</div>
 <div class="row">
-<div class="col-md-6 col-lg-6">
-</div>
-<div class="col-md-6 col-lg-6">
-   <label>Moster type:
-   	<select id="monsterType" class="">
-		<option value="rept">Reptyle</option>
-		<option value="cock">Cockroach</option>
-		<option value="hum" selected>Humanoid</option>
-	</select>
-   </label><br/>
-   <label class="reptile">Хищьник:
-      <select id="rept-hunter">
+   <div class="col-md-7">
+	<canvas id="myCanvas" width="500" height="500" class="gen-result"></canvas>
+  </div>
+  <div class="col-md-5">
+      <!-- Single button -->
+<div class="row">
+   <label class="reptile">Хищник:<!--TODO-->
+      <select id="rept-hunter" class="form-control">
 	<option value="0">Нет</option>
 	<option value="1">Да</option>
       </select></br>
     </label>
-   <label class="reptile">Время активности:
-	<select id="rept-day">
+</div>
+<div class="row"><!--TODO-->
+         <label class="reptile">Время активности:
+	<select id="rept-day" class="form-control">
 		<option value="day">День</option>
 		<option value="night">Ночь</option>
 	</select></br>
     </label>
+</div>
+<div class="row">
    <label class="reptile">Количество лап:
-	<select id="rept-legs">
+	<select id="rept-legs" class="form-control">
 		<option value="4">4</option>
 		<option value="8">8</option>
 	</select></br>
     </label>
+</div>
+<div class="row">
     <label class="reptile">Количество глаз:
-      <select id="rept-eyes">
+      <select id="rept-eyes" class="form-control">
 	<option value="0">0</option>
 	<option value="2">2</option>
 	<option value="4">4</option>
@@ -166,25 +124,80 @@
 	<option value="10">Hunter</option>
       </select>
     </label>
-
-   <label>Eyes:
-	<select>Spikes:
-		<option value="0">No</option>
-		<option value="1">Yes</option>
-	</select>
+</div>
+<!-- cock -->
+<div class="row">
+   <label class="cock">Хвост:
+	<select id="cock-tail" class="form-control">
+		<option value="0">Нет</option>
+		<option value="1">Один</option>
+		<option value="2">Двойной</option>
+	</select></br>
     </label>
-	<button id="generateMonster">Show me monster</button>
+</div>
+<div class="row">
+   <label class="cock">Образ жызни:
+	<select id="cock-throat" class="form-control">
+		<option value="0">Травоядный</option>
+		<option value="1">Хищник</option>
+	</select></br>
+    </label>
+</div>
+<div class="row">
+   <label class="cock">Место обитания:
+	<select id="cock-legs" class="form-control">
+		<option value="1">Сухопутный</option>
+		<option value="0">Водоплавающий</option>
+	</select></br>
+    </label>
+</div>
+<div class="row">
+   <label class="cock">Тип:
+	<select id="cock-body" class="form-control">
+		<option value="1">Жывой</option>
+		<option value="0">Нежывой</option>
+	</select></br>
+    </label>
+</div>
+<!--humanoid -->
+<div class="row">
+   <label class="hum">Агресивен:
+	<select id="hum-head" class="form-control">
+		<option value="0">Посредственно</option>
+		<option value="1">Очень</option>
+	</select></br>
+    </label>
+</div>
+<div class="row">
+   <label class="hum">Панцер:
+	<select id="hum-striks" class="form-control">
+		<option value="0">Нет</option>
+		<option value="1">Шипы</option>
+	</select></br>
+    </label>
+</div>
+<div class="row">
+   <label class="hum">Место обитания:
+	<select id="hum-tail" class="form-control">
+		<option value="0">Пустиня</option>
+		<option value="1">Лес</option>
+	</select></br>
+    </label>
+</div>
+<div class="row">
+   <label class="hum">Количество пальцев:
+	<select id="hum-fingers" class="form-control">
+		<option value="0">по 3</option>
+		<option value="1">по 4</option>
+	</select></br>
+    </label>
+</div>
+      <button type="button" class="btn btn-default apply" id="generateMonster">Применить</button>
+    </div>
 </div>
 </div>
-
-
-
-
 </div>
-    
-   
-  
-      
+       
     <!-- ******FOOTER****** --> 
     <footer class="footer bg">
         <!-- <div class="container text-center">
