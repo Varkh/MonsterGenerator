@@ -30,4 +30,10 @@ jQuery(document).ready(function($) {
 		
 	});
 
+    /*how-to*/
+    $('#step1').click(function(){$('.how-it-in').removeClass('how-it-in').addClass('step1');});
+    $('#step2').click(function(){$('.how-it-in').removeClass('how-it-in').addClass('step2');});
+    $('#step3').click(function(){$('.how-it-in').removeClass('how-it-in').addClass('step3');});
+    $('#step4').click(function(){$('.how-it-in').removeClass('how-it-in').addClass('step4');});
+
 });

@@ -107,7 +107,7 @@
 		ctx.scale(1, 1);
 		
 		if(body != 1) {
-			ctx.drawImage(cockScale, 36, 192);
+			ctx.drawImage(cockScale, 0, 0);
 		} else {
 			ctx.drawImage(cockBody, 0, 0);	
 		}

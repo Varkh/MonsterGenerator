@@ -769,7 +769,16 @@ span.why_we_3:hover {
 
 .how-it {
   width: 638px;
+  height: 380px;
   float: left;
+  background: url(../images/img-note2.png) 0% 0% no-repeat;
+}
+
+.how-it-in {
+  background: url(../images/img-note1.png) 0% 0% no-repeat;
+  width: 483px;
+  height: 304px;
+  margin: 20px 0 0 78px;
 }
 
 span.how-it-img, span.how-it-img-1, span.how-it-img-2, span.how-it-img-3 {
@@ -962,8 +971,9 @@ margin: 20px 0 0;
 .blog li {
   list-style-type: none;
   background: url(../images/cat.png) center left no-repeat;
-  padding: 0 0 0 174px;
+  padding: 0 0 0 200px;
   height: 176px;
+  margin: 0 0 88px;
 }
 
 .blog .blog-author {
@@ -978,14 +988,82 @@ margin: 20px 0 0;
   text-decoration: none;
 }
 
-.blog-author h4 {
+.blog li h4 {
   color: #727272;
   font-size: 20px;
   width: 620px;
 }
 
-.blog-author p {
+.blog li p {
   color: #727272;
-  font-size: 12px;
+  font-size: 13px;
   width: 620px;
+}
+
+span.price a {
+color: #727272;
+}
+
+span.price a:hover {
+  text-decoration: none;
+}
+
+span.price {
+display: inline-block;
+float: right;
+}
+
+.price-num {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+span.go-on {
+display: inline-block;
+float: right;
+}
+
+span.go-on a {
+color: #356b9a;
+}
+
+span.go-on a:hover {
+text-decoration: none;
+}
+
+.clear {
+  clear: both;
+}
+
+span.discount {
+  color: #ED0707;
+  background: url(../images/bg-discount.png) center center no-repeat;
+}
+
+.step1 {
+  background: url(../images/create.png) 50% 28% no-repeat;
+   width: 483px;
+  height: 304px;
+  margin: 20px 0 0 78px;
+}
+
+.step2 {
+  background: url(../images/form.png) top center no-repeat;
+  width: 483px;
+  height: 304px;
+  margin: 20px 0 0 78px;
+}
+
+.step3 {
+  background: url(../images/experiment.png) top center no-repeat;
+  width: 483px;
+  height: 304px;
+  margin: 20px 0 0 78px;
+}
+
+.step4 {
+  background: url(../images/result.png) top center no-repeat;
+  width: 483px;
+  height: 304px;
+  margin: 20px 0 0 78px;
 }
